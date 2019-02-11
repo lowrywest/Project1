@@ -10,12 +10,6 @@ public class HammingDist
 	private ArrayList <String> allSTID= new ArrayList<String>();
 	private String[] temp= new String[120];
 	
-	public HammingDist(String first, String second)
-	{
-		firstSTID=first;
-		secondSTID=second;
-	}
-	
 	public void readInfo() throws IOException
 	{
 			int loc=0;
@@ -34,13 +28,18 @@ public class HammingDist
 				}
 			STIDVals.close();
 	}
+	public HammingDist(String first, String second) throws IOException
+	{
+		firstSTID=first;
+		secondSTID=second;
+		readInfo();
+	}
 	
 	public int singleHammDist(String first, String second)
 	{
 		int hamDist=0;
 		for(int loc=0;loc<first.length();loc++)
 			{
-			System.out.println(Arrays.toString(allSTID.toArray(temp)));
 				if(first.charAt(loc)!=second.charAt(loc))
 				{
 					hamDist++;
@@ -83,6 +82,7 @@ public class HammingDist
 	
 	public String toString() 
 	{
+		
 		int hammDist= singleHammDist(firstSTID, secondSTID);
 		ArrayList <Integer> firstNodes= numNodes(firstSTID);
 		ArrayList <Integer> secondNodes= numNodes(secondSTID);
