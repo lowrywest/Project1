@@ -8,7 +8,7 @@ public class HammingDist
 	private String firstSTID;
 	private String secondSTID;
 	private ArrayList <String> allSTID= new ArrayList<String>();
-	private String[] temp= new String[120];
+	private int[] temp= new int[4];
 	
 	public void readInfo() throws IOException
 	{
@@ -50,7 +50,11 @@ public class HammingDist
 	
 	public ArrayList <Integer> numNodes(String inputSTID)
 	{
-		ArrayList <Integer> nodes= new ArrayList<Integer>(4);
+		ArrayList <Integer> nodes= new ArrayList<Integer>();
+		nodes.add(0);
+		nodes.add(0);
+		nodes.add(0);
+		nodes.add(0);
 		int temp=0;
 		for(int i=0; i<allSTID.size();i++)
 		{
