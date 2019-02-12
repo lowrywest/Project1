@@ -47,5 +47,14 @@ public class HammingDist
 		return hamDist;
 	}
 
-	
+	public ArrayList <Integer> numNodes(String inputSTID)
+	{
+		ArrayList <Integer> nodes = new ArrayList<Integer>();
+		nodes.add(0); 
+		nodes.add(0);
+		nodes.add(0);
+		nodes.add(0);
+		int temp=0;
+		
+	}
 }
