@@ -17,6 +17,14 @@ public class HammingDist
 			STIDVals.readLine();
 			STIDVals.readLine();
 			
+			while(loc<120)
+			{
+				temp=STIDVals.readLine();
+				temp=temp.substring(1, 5);
+				allSTID.add(temp);
+				loc++;
+			}
+		STIDVals.close();
 	}
 	
 }
