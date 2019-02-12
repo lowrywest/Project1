@@ -34,5 +34,18 @@ public class HammingDist
 		readInfo();
 	}
 	
+	public int singleHammDist(String first, String second)
+	{
+		int hamDist=0;
+		for(int loc=0;loc<first.length();loc++)
+			{
+				if(first.charAt(loc)!=second.charAt(loc))
+				{
+					hamDist++;
+				}
+			}
+		return hamDist;
+	}
+
 	
 }
