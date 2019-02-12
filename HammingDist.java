@@ -27,4 +27,12 @@ public class HammingDist
 		STIDVals.close();
 	}
 	
+	public HammingDist(String first, String second) throws IOException
+	{
+		firstSTID=first;
+		secondSTID=second;
+		readInfo();
+	}
+	
+	
 }
