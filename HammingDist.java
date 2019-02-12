@@ -3,27 +3,41 @@ import java.util.ArrayList;
 
 public class HammingDist
 {
+	//Holding the file to read from in a global variable
 	private String fileName= "Mesonet.txt";
+	//SITD values to be Tested
 	private String firstSTID;
 	private String secondSTID;
+	//ArrayList of all the STID values
 	private ArrayList <String> allSTID= new ArrayList<String>();
 	
+	//Reading in the STID values from the Mesonet.txt file
 	public void readInfo() throws IOException
 	{
+			//holds the number of the STID value being read in 
 			int loc=0;
+			//holds the current STID value
 			String temp="";
+			//Constructing the Buffered reader
 			BufferedReader STIDVals= new BufferedReader(new FileReader(fileName));
+			//Priming reads to skip the first 3 lines of Mesonet.txt
 			STIDVals.readLine();
 			STIDVals.readLine();
 			STIDVals.readLine();
 			
+			//loop through lines of the Mesonet.txt file
 			while(loc<120)
 			{
+				//setting temp to the entire line at that location
 				temp=STIDVals.readLine();
+				//changing the value from the entire line to just the STID value
 				temp=temp.substring(1, 5);
+				//adding the STID value to the ArrayList
 				allSTID.add(temp);
+				//Incrementing the location being read in
 				loc++;
 			}
+		//Closing the BufferReader 
 		STIDVals.close();
 	}
 	
