@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class HammingDist
 {
-	private String fileName= "Tests.txt";
+	private String fileName= "Mesonet.txt";
 	private String firstSTID;
 	private String secondSTID;
 	private ArrayList <String> allSTID= new ArrayList<String>();
@@ -18,10 +18,10 @@ public class HammingDist
 			STIDVals.readLine();
 			STIDVals.readLine();
 			
-			while(loc<7)
+			while(loc<120)
 				{
 					temp=STIDVals.readLine();
-					temp=temp.substring(0, 5);
+					temp=temp.substring(1, 5);
 					allSTID.add(temp);
 					loc++;
 				}
