@@ -41,23 +41,32 @@ public class HammingDist
 		STIDVals.close();
 	}
 	
+	//Constructing the HammingDist Object
 	public HammingDist(String first, String second) throws IOException
 	{
+		//getting the STID values to be compared and setting them to the global variables
 		firstSTID=first;
 		secondSTID=second;
+		//Calling the method to read in the STID values from Mesonet.txt file 
 		readInfo();
 	}
 	
+	//Method for finding the hamming distance between two strings
 	public int singleHammDist(String first, String second)
 	{
+		//Variable to hold the hamming distance
 		int hamDist=0;
+		//loop through the string
 		for(int loc=0;loc<first.length();loc++)
 			{
+				//comparing the characters at the location
 				if(first.charAt(loc)!=second.charAt(loc))
 				{
+					//increment the hamming distance accordingly
 					hamDist++;
 				}
 			}
+		//Returning the hamming distance
 		return hamDist;
 	}
 
