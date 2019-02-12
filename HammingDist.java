@@ -17,7 +17,7 @@ public class HammingDist
 			STIDVals.readLine();
 			STIDVals.readLine();
 			
-			while(loc<120)
+			while(loc<7)
 			{
 				temp=STIDVals.readLine();
 				temp=temp.substring(1, 5);
