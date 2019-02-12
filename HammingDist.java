@@ -82,4 +82,17 @@ public class HammingDist
 		return nodes;
 		
 	}
+	
+	public String toString() 
+	{
+		
+		int hammDist= singleHammDist(firstSTID, secondSTID);
+		ArrayList <Integer> firstNodes= numNodes(firstSTID);
+		ArrayList <Integer> secondNodes= numNodes(secondSTID);
+		return String.format("The Hamming Distance of %s and %s: %d\nOut of 119, for %s, number of nodes are: %d, %d, %d, %d and\n"
+				+ "for %s, number of nodes are: %d, %d, %d, %d respectively. ",firstSTID, secondSTID, hammDist, firstSTID, firstNodes.get(0),
+				firstNodes.get(1),firstNodes.get(2),firstNodes.get(3), secondSTID, secondNodes.get(0),secondNodes.get(1),secondNodes.get(2),
+				secondNodes.get(3));
+	}
+
 }
