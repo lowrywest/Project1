@@ -70,38 +70,53 @@ public class HammingDist
 		return hamDist;
 	}
 
+	//comparing the whole ArrayList of STID Values to a given STID value
 	public ArrayList <Integer> numNodes(String inputSTID)
 	{
+		//Constructing a ArrayList to whold the number of nodes
 		ArrayList <Integer> nodes = new ArrayList<Integer>();
+		//Initializing the values to 0
 		nodes.add(0); 
 		nodes.add(0);
 		nodes.add(0);
 		nodes.add(0);
-		int temp=0;
+		//temp holds the current e count
+		int hammingDistance=0;
+		//Loops through the entire ArrayList of STID values
 		for(int i=0; i<allSTID.size();i++)
 		{
-			
+			//checks to make sure the STID value is different than the one from the ArrayList
 			if(!inputSTID.equals(allSTID.get(i)))
 			{
-				   temp= singleHammDist(inputSTID, allSTID.get(i));
-					if(temp==1)
+				   //gets the hamming Distance between the two STID values
+				   hammingDistance= singleHammDist(inputSTID, allSTID.get(i));
+				    //Looks to see if the hamming distance is 1
+					if(hammingDistance==1)
 					{
+						//increment the value of the nodes at 0
 						nodes.set(0, nodes.get(0)+1);
 					}
-					else if(temp==2)
+					//Looks to see if the hamming distance is 2
+					else if(hammingDistance==2)
 					{
+						//increment the value of the nodes at 1
 						nodes.set(1, nodes.get(1)+1);
 					}
-					else if(temp==3)
+					//Looks to see if the hamming distance is 3
+					else if(hammingDistance==3)
 					{
+						//increment the value of the nodes at 2
 						nodes.set(2, nodes.get(2)+1);
 					}
+					//if the hamming distance is 4
 					else 
 					{
+						//increment the value of the nodes at 3
 						nodes.set(3, nodes.get(3)+1);
 					}
 			}
 		}
+		//return the ArrayList of node values
 		return nodes;
 		
 	}
