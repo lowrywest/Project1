@@ -4,7 +4,7 @@ public class Main
 {
 	public static void main(String[] args) throws IOException 
 	{
-		HammingDist HammDist = new HammingDist("WEST", "BESS");
+		HammingDist HammDist = new HammingDist("NRMN", "NOWA");
 		System.out.println(HammDist);
 	}
 }
