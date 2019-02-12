@@ -55,6 +55,31 @@ public class HammingDist
 		nodes.add(0);
 		nodes.add(0);
 		int temp=0;
+		for(int i=0; i<allSTID.size();i++)
+		{
+			
+			if(!inputSTID.equals(allSTID.get(i)))
+			{
+				   temp= singleHammDist(inputSTID, allSTID.get(i));
+					if(temp==1)
+					{
+						nodes.set(0, nodes.get(0)+1);
+					}
+					else if(temp==2)
+					{
+						nodes.set(1, nodes.get(1)+1);
+					}
+					else if(temp==3)
+					{
+						nodes.set(2, nodes.get(2)+1);
+					}
+					else 
+					{
+						nodes.set(3, nodes.get(3)+1);
+					}
+			}
+		}
+		return nodes;
 		
 	}
 }
