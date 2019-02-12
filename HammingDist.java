@@ -4,11 +4,10 @@ import java.util.Arrays;
 
 public class HammingDist
 {
-	private String fileName= "Mesonet.txt";
+	private String fileName= "Tests.txt";
 	private String firstSTID;
 	private String secondSTID;
 	private ArrayList <String> allSTID= new ArrayList<String>();
-	private int[] temp= new int[4];
 	
 	public void readInfo() throws IOException
 	{
@@ -19,7 +18,7 @@ public class HammingDist
 			STIDVals.readLine();
 			STIDVals.readLine();
 			
-			while(loc<120)
+			while(loc<7)
 				{
 					temp=STIDVals.readLine();
 					temp=temp.substring(0, 5);
@@ -50,8 +49,8 @@ public class HammingDist
 	
 	public ArrayList <Integer> numNodes(String inputSTID)
 	{
-		ArrayList <Integer> nodes= new ArrayList<Integer>();
-		nodes.add(0);
+		ArrayList <Integer> nodes = new ArrayList<Integer>();
+		nodes.add(0); 
 		nodes.add(0);
 		nodes.add(0);
 		nodes.add(0);
